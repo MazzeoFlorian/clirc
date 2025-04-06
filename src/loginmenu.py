@@ -48,6 +48,7 @@ def loginMenu():
             else:
                 print("")
                 print(f"{style.bcolor.FAIL}Credentials not correct, try again.{style.bcolor.ENDC}")
+                print("")
         elif menInp == loginMenuCmds[1]:
             os.system("clear")
             usrcreate.userCreation()

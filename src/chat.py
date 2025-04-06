@@ -7,6 +7,12 @@ import menu
 timestamp = datetime.now().strftime('%H:%M:S')
 
 def chatLoop():
+
+    with open("credentials.txt", "r") as f:
+        usr = f.read().split("\n")
+    f.close()
+
+
     while const.CHAT["active"]:
         os.system('clear')
 
@@ -18,9 +24,9 @@ def chatLoop():
         timestamp = datetime.now().strftime('%H:%H:%S')
 
         with open("log.txt", "a") as logw:
-            logw.write(f"[{timestamp}] <User:>: {chatInput}\n")
+            logw.write(f"[{timestamp}] <{usr}>: {chatInput}\n")
             
-        if chatInput.lower() == "logout":
+        if chatInput.lower() == "/quit" or "/q":
             const.CHAT["active"] = False
             os.system('clear')
             menu.menu()
