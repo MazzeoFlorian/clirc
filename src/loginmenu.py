@@ -70,7 +70,7 @@ def startUp():
     print("by Florian Mazzeo (2025 - )")
     print("")
     time.sleep(1)
-    print("Source available on: GITHUB")
+    print(f"Source available on: {style.bcolor.UNDERLINE}https://github.com/MazzeoFlorian/clirc{style.bcolor.ENDC}")
     time.sleep(1)
     os.system("clear")
     loginMenu()
