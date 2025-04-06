@@ -39,11 +39,13 @@ def menu():
             const.CHAT["active"] = True
             chat.chatLoop()
         elif menInp == menuCmds[1]:
-            print("Not yet implemented.")
+            print(f"{style.bcolor.WARNING}Not yet implemented.{style.bcolor.ENDC}")
             time.sleep(1)
             os.system('clear')
         elif menInp == menuCmds[2]:
             logout()
         else:
+            print("")
             print(f"{style.bcolor.FAIL}Wrong or unknown input.{style.bcolor.ENDC}")
+            time.sleep(1)
             os.system('clear')

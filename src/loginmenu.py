@@ -28,6 +28,7 @@ def loginMenu():
 
         menInp = input("> ")
         if menInp == loginMenuCmds[0]:
+            print("")
             usr_name = input("Enter user name: ")
             pwd = input("Enter password: ")
 
@@ -60,7 +61,9 @@ def loginMenu():
             const.MAIN = False
             os.system('clear')
         else:
+            print("")
             print(f"{style.bcolor.FAIL}Wrong or unknown input.{style.bcolor.ENDC}")
+            print("")
             time.sleep(1)
 
 def startUp():

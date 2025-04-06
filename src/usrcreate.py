@@ -22,6 +22,7 @@ def userCreation():
                 f.write(usr_name + "\n")
                 f.write(hash1)
             f.close()
+            print("")
             print(f"{style.bcolor.OKGREEN}Account successfully created!{style.bcolor.ENDC}")
             time.sleep(1)
             os.system('clear')
