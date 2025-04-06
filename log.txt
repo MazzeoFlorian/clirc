@@ -1,0 +1,16 @@
+[14:14:39] <User:>: test
+[14:14:48] <User:>: hello world!
+[14:14:16] <User:>: logout
+[14:14:44] <User:>: "logout"
+[14:14:47] <User:>: logout
+[14:14:53] <User:>: i can't end it :/
+[14:14:55] <User:>: meh
+[14:14:07] <User:>: This is a second test
+[14:14:10] <User:>: logout
+[14:14:21] <User:>: The logout now works!
+[14:14:46] <User:>: I now need to implement it like /logout
+[14:14:51] <User:>: logout
+[15:15:39] <User:>: logout
+[16:16:21] <User:>: logout
+[18:18:47] <User:>: logout
+[19:19:42] <User:>: logout
