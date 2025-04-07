@@ -1,17 +1,16 @@
 ##Chat module
 import const
-import os
 from datetime import datetime
 import menu
+import os
+import pymongo
+import time
 
 timestamp = datetime.now().strftime('%H:%M:S')
 
 def chatLoop():
 
-    with open("credentials.txt", "r") as f:
-        usr = f.read().split("\n")
-    f.close()
-
+    usr = const.CURRENT_USER
 
     while const.CHAT["active"]:
         os.system('clear')
@@ -21,12 +20,15 @@ def chatLoop():
                 print(logr.read())
 
         chatInput = input("> ")
-        timestamp = datetime.now().strftime('%H:%H:%S')
 
         with open("log.txt", "a") as logw:
             logw.write(f"[{timestamp}] <{usr}>: {chatInput}\n")
             
-        if chatInput.lower() == "/quit" or "/q":
+        if chatInput.lower() in ["/quit", "/q"]:
             const.CHAT["active"] = False
             os.system('clear')
             menu.menu()
+        elif chatInput.lower() in ["/help"]:
+            print("/quit or /q: Quit the current chat")
+            print("/help: Prints all commands (including this one)")
+            time.sleep(2)
