@@ -10,7 +10,7 @@ import time
 
 def userCreation():
     while const.USRCREATE["active"]:
-        print(f"{style.bcolor.UNDERLINE}{style.bcolor.OKCYAN}Account Creation{style.bcolor.ENDC}")
+        print(f"{style.bcolor.UNDERLINE}Account Creation{style.bcolor.ENDC}")
         print("")
         usr_name = input("Enter your user name: ")
         pwd = getpass.getpass("Enter your password: ")
@@ -34,5 +34,5 @@ def userCreation():
             loginmenu.loginMenu()
         else:
             print("")
-            print(f"{style.bcolor.FAIL} Passwords are not matching, please try again!")
+            print(f"{style.bcolor.FAIL} Passwords are not matching, please try again!{style.bcolor.ENDC}")
 

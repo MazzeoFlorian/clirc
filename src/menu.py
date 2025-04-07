@@ -7,7 +7,7 @@ import time
 
 #Menu tuple
 menuCmds = (
-    "new",
+    "enter",
     "options",
     "logout"
 )
@@ -27,7 +27,7 @@ def menu():
         print("")
         print("Select an option:")
         print("")
-        print(f"Open {style.bcolor.OKCYAN}new{style.bcolor.ENDC} chat")
+        print(f"{style.bcolor.OKCYAN}Enter{style.bcolor.ENDC} chat room.")
         print(f"{style.bcolor.OKCYAN}Options{style.bcolor.ENDC} (NYI)")
         print(f"{style.bcolor.OKCYAN}Logout{style.bcolor.ENDC} clirc")
 

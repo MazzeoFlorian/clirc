@@ -12,11 +12,9 @@ import usrcreate
 
 loginMenuCmds = (
     "login",
-    "new user",
+    "create",
     "exit"
-)
-
-
+    )
 
 def loginMenu():
     while const.LOGINMENU["active"]:
@@ -25,7 +23,7 @@ def loginMenu():
         print("Select an option:")
         print("")
         print(f"{style.bcolor.OKCYAN}Login{style.bcolor.ENDC} to existing account.")
-        print(f"Create a {style.bcolor.OKCYAN}new user{style.bcolor.ENDC} account.")
+        print(f"{style.bcolor.OKCYAN}Create{style.bcolor.ENDC} a new account.")
         print(f"{style.bcolor.OKCYAN}Exit{style.bcolor.ENDC} clirc.")
 
         menInp = input("> ")

@@ -1,5 +1,9 @@
 # Changelog
 
+#### 0.2.2
+* Updated text to better reflect their function.
+    * Commands have been changed  because of this change.
+
 #### Version 0.2.1
 * Chat commands are now no longer visible in chat.
 
