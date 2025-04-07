@@ -21,8 +21,9 @@ def chatLoop():
 
         chatInput = input("> ")
 
-        with open("log.txt", "a") as logw:
-            logw.write(f"[{timestamp}] <{usr}>: {chatInput}\n")
+        if not chatInput.startswith("/"):
+            with open("log.txt", "a") as logw:
+                logw.write(f"[{timestamp}] <{usr}>: {chatInput}\n")
             
         if chatInput.lower() in ["/quit", "/q"]:
             const.CHAT["active"] = False
