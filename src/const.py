@@ -8,7 +8,7 @@ LOGINMENU = {"active": True}
 USRCREATE = {"active": True}
 
 #Version number
-VERSION = "0.1.3"
+VERSION = "0.2.1"
 
 #Database
 client = pymongo.MongoClient("mongodb://localhost:27017/")
