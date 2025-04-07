@@ -9,21 +9,23 @@ import time
 timestamp = datetime.now().strftime('%H:%M:S')
 
 def chatLoop():
-
     usr = const.CURRENT_USER
+
+    for log in const.chatlog.find().sort("timestamp", 1):
+        timestamp = log["timestamp"].strftime("%H:%M:%S")
+        print(f"[{timestamp}] <{log['user']}: {log['message']}")
 
     while const.CHAT["active"]:
         os.system('clear')
-
-        if os.path.exists("log.txt"):
-            with open ("log.txt", "r") as logr:
-                print(logr.read())
-
         chatInput = input("> ")
 
+
         if not chatInput.startswith("/"):
-            with open("log.txt", "a") as logw:
-                logw.write(f"[{timestamp}] <{usr}>: {chatInput}\n")
+            const.chatlog.insert_one({
+                "user": usr,
+                "timestamp": timestamp,
+                "message": chatInput
+            })
             
         if chatInput.lower() in ["/quit", "/q"]:
             const.CHAT["active"] = False
